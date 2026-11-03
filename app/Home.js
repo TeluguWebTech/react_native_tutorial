@@ -5,7 +5,8 @@ import {
   View,
   Text,
   StyleSheet,
-  StatusBar
+  StatusBar, 
+  ScrollView
 } from 'react-native';
 
 import { Link } from 'expo-router';
@@ -15,6 +16,7 @@ const Home = () => {
   return (
 
     <View style={styles.container}>
+       <ScrollView showsVerticalScrollIndicator={false}>
 
       <StatusBar barStyle="dark-content" backgroundColor="#f8fafc" />
 
@@ -31,8 +33,93 @@ const Home = () => {
         </Text>
       </View>
 
-      <View style={styles.cardContainer}>
+   
+          <View style={styles.cardContainer}>
 
+        <Link href="/Horizontal" style={styles.card}>
+          <View style={[styles.iconBox, { backgroundColor: '#dbeafe' }]}>
+            <Text style={styles.icon}>📘</Text>
+          </View>
+
+          <View style={styles.cardContent}>
+            <Text style={styles.cardTitle}>Horizontal view</Text>
+            <Text style={styles.cardDescription}>
+              Learn about this application
+            </Text>
+          </View>
+
+          <Text style={styles.arrow}>›</Text>
+        </Link>
+        <Link href="/Button" style={styles.card}>
+          <View style={[styles.iconBox, { backgroundColor: '#dbeafe' }]}>
+            <Text style={styles.icon}>📘</Text>
+          </View>
+
+          <View style={styles.cardContent}>
+            <Text style={styles.cardTitle}>Button</Text>
+            <Text style={styles.cardDescription}>
+              Learn about this application
+            </Text>
+          </View>
+
+          <Text style={styles.arrow}>›</Text>
+        </Link>
+        <Link href="/PressableEx" style={styles.card}>
+          <View style={[styles.iconBox, { backgroundColor: '#dbeafe' }]}>
+            <Text style={styles.icon}>📘</Text>
+          </View>
+
+          <View style={styles.cardContent}>
+            <Text style={styles.cardTitle}>Pressable</Text>
+            <Text style={styles.cardDescription}>
+              Learn about this application
+            </Text>
+          </View>
+
+          <Text style={styles.arrow}>›</Text>
+        </Link>
+        <Link href="/TextInputEx" style={styles.card}>
+          <View style={[styles.iconBox, { backgroundColor: '#dbeafe' }]}>
+            <Text style={styles.icon}>📘</Text>
+          </View>
+
+          <View style={styles.cardContent}>
+            <Text style={styles.cardTitle}>Text Input</Text>
+            <Text style={styles.cardDescription}>
+              Learn about this application
+            </Text>
+          </View>
+
+          <Text style={styles.arrow}>›</Text>
+        </Link>
+        <Link href="/LoginForm" style={styles.card}>
+          <View style={[styles.iconBox, { backgroundColor: '#dbeafe' }]}>
+            <Text style={styles.icon}>📘</Text>
+          </View>
+
+          <View style={styles.cardContent}>
+            <Text style={styles.cardTitle}>Login</Text>
+            <Text style={styles.cardDescription}>
+              Learn about this application
+            </Text>
+          </View>
+
+          <Text style={styles.arrow}>›</Text>
+        </Link>
+        <Link href="/About" style={styles.card}>
+          <View style={[styles.iconBox, { backgroundColor: '#dbeafe' }]}>
+            <Text style={styles.icon}>📘</Text>
+          </View>
+
+          <View style={styles.cardContent}>
+            <Text style={styles.cardTitle}>About</Text>
+            <Text style={styles.cardDescription}>
+              Learn about this application
+            </Text>
+          </View>
+
+          <Text style={styles.arrow}>›</Text>
+        </Link>
         <Link href="/About" style={styles.card}>
           <View style={[styles.iconBox, { backgroundColor: '#dbeafe' }]}>
             <Text style={styles.icon}>📘</Text>
@@ -79,6 +166,7 @@ const Home = () => {
         </Link>
 
       </View>
+    </ScrollView>
 
       <View style={styles.footer}>
         <Text style={styles.footerText}>

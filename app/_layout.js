@@ -1,9 +1,14 @@
 
-import {Stack} from "expo-router"
+import { Stack } from "expo-router"
+import { StatusBar } from 'expo-status-bar';
+
 
 const BasicLayout = () => {
   return (
-   <Stack />
+    <>
+      <StatusBar hidden={true} />
+      <Stack />
+    </>
   )
 }
 
